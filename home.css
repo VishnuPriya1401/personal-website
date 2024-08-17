@@ -11,8 +11,12 @@
   box-sizing: border-box;
   font-family: var(--theme-text);
 }
+html{
+  overflow-x: hidden;
+}
 body{
   background-color: var(--bg-color);
+  width: 100%;
   margin-top: 2rem;
   overflow-x: hidden;
 }
@@ -55,6 +59,7 @@ body{
   scale: 1.1;
 }
 .intro{
+  position: relative;
   display: flex;
   flex-wrap: wrap-reverse;
   width: 70%;
@@ -103,14 +108,15 @@ body{
   scale: 0.9;
 }
 .intro img{
-  width: 400px;
+  width: 300px;
   margin-bottom: 60px;
 }
 .top-shape{
   position: absolute;
-  rotate: 5deg;
-  top: -30%;
-  right: -10%;
+  overflow: hidden;
+  rotate: -15deg;
+  top: -70%;
+  right: -30%;
   z-index: -1;
 }
 .about{
@@ -361,7 +367,7 @@ textarea::-webkit-input-placeholder{
 }
 
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:300px) {
   .top-shape{
     width:300px;
     right:-50%;
