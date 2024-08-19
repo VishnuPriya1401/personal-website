@@ -15,9 +15,10 @@ html{
   overflow-x: hidden;
 }
 body{
+  position: relative;
   background-color: var(--bg-color);
   width: 100%;
-  margin-top: 2rem;
+  padding-top: 2rem;
   overflow-x: hidden;
 }
 #navigation{
@@ -63,19 +64,20 @@ body{
   display: flex;
   flex-wrap: wrap-reverse;
   width: 70%;
-  margin: 90px auto;
-  justify-content: space-between;
+  margin: 4rem auto;
   align-items: center;
+  justify-content: center;
+  gap: 80px;
 }
 .intro-text{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 18px;
+  gap: 1.6rem;
 }
 .intro-text h6{
   color: var(--theme-1);
-  font-size: 26px;
+  font-size: 1.3rem;
   font-weight: 400;
 }
 .intro-text h6 span{
@@ -83,19 +85,20 @@ body{
 }
 .intro-text h2{
   color: var(--theme-1);
-  font-size: 60px;
+  font-size: 2.6rem;
   font-weight: 800;
 }
 .intro-text h4{
   color: var(--theme-1);
-  font-size: 30px;
+  font-size: 1.6rem;
   font-weight: 600;
+  max-width: 400px;
 }
 .intro-text a{
   background-color: var(--theme-1);
   border-radius: 4px;
-  font-size: 20px;
-  padding: 10px 20px;
+  font-size: 1.3rem;
+  padding: 0.6rem 1.4rem;
   font-weight: 600;
   color: var(--bg-color);
   align-content: center;
@@ -107,16 +110,16 @@ body{
 .intro-text a:hover{
   scale: 0.9;
 }
-.intro img{
-  width: 300px;
+.intro-img img{
+  width: 400px;
   margin-bottom: 60px;
 }
 .top-shape{
+  width: 900px;
   position: absolute;
-  overflow: hidden;
-  rotate: -15deg;
-  top: -70%;
-  right: -30%;
+  top: -90%;
+  right: -35%;
+  rotate: 120deg;
   z-index: -1;
 }
 .about{
@@ -273,18 +276,19 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 500px;
 }
-form{
+.form{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 30px;
+  width: 500px;
 }
 input,
 textarea{
-  width: 400px;
+  width: 90%;
+  margin: auto;
   resize: none;
   font-size: 20px;
   font-weight: 500;
@@ -366,12 +370,40 @@ textarea::-webkit-input-placeholder{
   margin: 0 40px;
 }
 
-
-@media only screen and (max-width:300px) {
+@media only screen and (max-width: 1300px){
   .top-shape{
-    width:300px;
-    right:-50%;
-    top: -30%;
-    rotate: 5deg;
+    width: 900px;
+    top: -40%;
+    right: -55%;
+  }
+}
+@media only screen and (max-width: 800px){
+  .top-shape{
+    width: 900px;
+    top: -40%;
+    right: -75%;
+  }
+  .img-scroll img{
+    width: 300px;
+  }
+  .about{
+    width: 80%;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 400px){
+  .top-shape{
+    width: 800px;
+    top: -40%;
+    right: -75%;
+  }
+  .intro-img img{
+    width: 300px;
+  }
+  .img-scroll img{
+    width: 240px;
+  }
+  input,textarea{
+    width: 300px;
   }
 }
