@@ -277,7 +277,7 @@ body{
   align-items: center;
   justify-content: center;
 }
-.form{
+form{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -304,7 +304,7 @@ textarea::-webkit-input-placeholder{
   font-size: 20px;
   font-weight: 500;
 }
-.submit-btn{
+button{
   background-color: var(--bg-color);
   color: var(--theme-1);
   box-shadow: var(--img-shadow);
@@ -404,6 +404,6 @@ textarea::-webkit-input-placeholder{
     width: 240px;
   }
   input,textarea{
-    width: 300px;
+    width: 260px;
   }
 }
